@@ -1,7 +1,7 @@
 .sticky-in-middle {
     width: 100%;
-    height: 10em;
-    top: calc(50% - 5em);
+    height: 7.5em;
+    top: calc(50% - 3.25em);
     text-align: center;
     position: fixed;
     z-index: 10;
@@ -14,11 +14,11 @@
     width: calc(100% - 1em);
     height: calc(100% - 1em);
     background-color: var(--secondBackgroundColor);
-    box-shadow: 0 0 0.2em black;
+    box-shadow: 0 0 0.5em black;
 }
 
 .sticky-in-middle>*>* {
-    padding: 0.75em;
+    padding: 0.4em;
 }
 
 .strips {
