@@ -1,0 +1,36 @@
+
+/* 4k desktop */
+
+@media only screen and (min-width: 1442px) {}
+
+/* desktop */
+
+@media only screen and (max-width: 1441px) {}
+
+/* laptop */
+
+@media only screen and (max-width: 1025px) {}
+
+/* tablet */
+
+@media only screen and (max-width: 769px) {
+    nav{
+        flex-direction: column;
+    }
+    .column {
+        flex-direction: column;
+    }
+    .column>.column-2, .column>.column-3, .column>.column-4, .column>.column-5, .column>.column-6, .column>.column-7, .column>.column-8 {
+        width: 100%;
+    }
+}
+
+/* phone */
+
+@media only screen and (max-width: 426px) {
+    .sticky-to-top {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+    }
+}
