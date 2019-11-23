@@ -1,0 +1,103 @@
+.sticky-in-middle {
+    width: 100%;
+    height: 10em;
+    top: calc(50% - 5em);
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 0 0.2em black;
+    font-size: large;
+}
+
+.sticky-in-middle>* {
+    margin: 0.5em;
+    width: calc(100% - 1em);
+    height: calc(100% - 1em);
+    background-color: var(--secondBackgroundColor);
+    box-shadow: 0 0 0.2em black;
+}
+
+.sticky-in-middle>*>* {
+    padding: 0.75em;
+}
+
+.strips {
+    background: repeating-linear-gradient( -55deg, rgb(255, 174, 0), rgb(255, 174, 0) 30px, #333 30px, #333 60px);
+    width: 200vw;
+    -webkit-animation-name: MOVE-BG;
+    -webkit-animation-duration: .6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: MOVE-BG;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes MOVE-BG {
+    from {
+        -webkit-transform: translateX(-74px);
+    }
+    to {
+        -webkit-transform: translateX(0px);
+    }
+}
+
+@keyframes MOVE-BG {
+    from {
+        -webkit-transform: translateX(-74px);
+    }
+    to {
+        -webkit-transform: translateX(0px);
+    }
+}
+
+/* 4k desktop */
+
+@media only screen and (min-width: 1442px) {}
+
+/* desktop */
+
+@media only screen and (max-width: 1441px) {}
+
+/* laptop */
+
+@media only screen and (max-width: 1025px) {}
+
+/* tablet */
+
+@media only screen and (max-width: 769px) {
+    .strips {
+        background: repeating-linear-gradient( -55deg, rgb(255, 174, 0), rgb(255, 174, 0) 20px, #333 20px, #333 40px);
+    }
+    .sticky-in-middle {
+        font-size: 0.75em;
+    }
+    @-webkit-keyframes MOVE-BG {
+        from {
+            -webkit-transform: translateX(-49px);
+        }
+        to {
+            -webkit-transform: translateX(0px);
+        }
+    }
+    @keyframes MOVE-BG {
+        from {
+            -webkit-transform: translateX(-49px);
+        }
+        to {
+            -webkit-transform: translateX(0px);
+        }
+    }
+}
+
+/* phone */
+
+@media only screen and (max-width: 460px) {
+    .strips {
+        background: repeating-linear-gradient( -55deg, rgb(255, 174, 0), rgb(255, 174, 0) 10px, #333 10px, #333 20px);
+    }
+    .sticky-in-middle {
+        font-size: 0.5em;
+    }
+}
