@@ -81,7 +81,7 @@ a, p, article, input {
     font-size: 1em;
 }
 
-article {
+article, p {
     max-width: 50em;
     margin: auto;
 }
@@ -130,7 +130,9 @@ a[page-link]:link {}
 
 a[page-link]:visited {}
 
-a[page-link][select] {}
+a[page-link][select] {
+    border-bottom: 4px solid var(--highlight);
+}
 
 a[page-link]:hover:not([display]), a[page-link]:focus:not([display]) {
     background: var(--highlight);
@@ -149,7 +151,7 @@ input, select, textarea {
     display: block;
     color: var(--tertiary);
     padding: 0.5em 0.5em;
-    transition: border-bottom 250ms, background 250ms;
+    transition: border-bottom 250ms, background-color 250ms;
     opacity: 0.75;
     resize: none;
     background: var(--secondary);
@@ -330,6 +332,8 @@ input:valid:not([novalidate]):not(:focus):not([type="button"]):not([type="search
 .column {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
 }
 
 .column>.column-2 {
@@ -389,6 +393,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 10;
+    font-size: large;
 }
 
 nav>* {
