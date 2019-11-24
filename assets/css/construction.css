@@ -4,21 +4,17 @@
     top: calc(50% - 3.25em);
     text-align: center;
     position: fixed;
-    z-index: 10;
     box-shadow: 0 0 0.5em black;
-    font-size: large;
+    font-size: larger;
 }
 
 .sticky-in-middle>* {
     margin: 0.5em;
+    padding: 1.25em;
     width: calc(100% - 1em);
     height: calc(100% - 1em);
-    background-color: var(--second-background-color);
     box-shadow: 0 0 0.5em black;
-}
-
-.sticky-in-middle>*>* {
-    padding: 0.4em;
+    background-color: var(--second-background);
 }
 
 .strips {
@@ -32,6 +28,12 @@
     animation-duration: .6s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    border-bottom: 4px solid var(--second-background);
 }
 
 @-webkit-keyframes MOVE-BG {
