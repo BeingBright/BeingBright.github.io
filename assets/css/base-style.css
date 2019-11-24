@@ -1,5 +1,4 @@
 :root {
-
     --main: rgb(20, 20, 20);
     --secondary: rgb(40, 40, 40);
     --tertiary: rgb(80, 80, 80);
@@ -25,7 +24,6 @@
 
 ::-webkit-scrollbar-thumb {
     background: var(--highlight);
-
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -100,7 +98,6 @@ article, p {
 .actionButton:visited {}
 
 .actionButton:hover, .actionButton:focus {
-
     border: var(--highlight);
 }
 
@@ -157,7 +154,6 @@ a[page-link]:active:not([display]) {
 input, select, textarea {
     display: block;
     color: var(--tertiary);
-
     padding: 0.5em 0.5em;
     transition: border-bottom 250ms, background-color 250ms;
     opacity: 0.75;
@@ -237,7 +233,6 @@ input[type="range"]::-moz-range-thumb {
     margin: 0px;
     padding: 0px;
     background: var(--highlight);
-
 }
 
 input[type="search"] {
@@ -303,6 +298,7 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
     background: var(--highlight);
 }
+
 progress::-moz-progress-bar {
     background: var(--highlight);
 }
