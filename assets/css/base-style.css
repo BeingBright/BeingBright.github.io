@@ -1,12 +1,12 @@
 :root {
-    --mainColor: white;
-    --secondaryColor: rgb(200, 200, 200);
-    --tertiaryColor: rgb(75, 75, 75);
-    --mainBackgroundColor: rgb(33, 33, 33);
-    --secondBackgroundColor: rgb(66, 66, 66);
-    --tertiaryBackgroundColor: rgb(99, 99, 99);
-    --highlightColor: rgb(255, 157, 0);
-    --selectlightColor: rgb(0, 183, 255);
+    --main-color: rgb(20, 20, 20);
+    --secondary-color: rgb(40, 40, 40);
+    --tertiary-color: rgb(80, 80, 80);
+    --main-background-color: rgb(250, 250, 250);
+    --second-background-color: rgb(230, 230, 230);
+    --tertiary-background-color: rgb(210, 210, 210);
+    --highlight-color: rgb(255, 130, 0);
+    --selectlightColor: rgb(58, 217, 245);
     --valid: rgb(0, 200, 0);
     --midrange: rgb(255, 130, 0);
     --invalid: rgb(200, 0, 0);
@@ -19,11 +19,11 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--secondBackgroundColor);
+    background: var(--second-background-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--highlightColor);
+    background-color: var(--highlight-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -37,13 +37,13 @@
     font-family: 'Source Code Pro', monospace;
     border: none;
     outline: none;
-    color: var(--mainColor);
+    color: var(--main-color);
     box-sizing: border-box;
     font-size: 1em;
 }
 
 body {
-    background-color: var(--mainBackgroundColor);
+    background-color: var(--main-background-color);
     overflow-x: hidden;
 }
 
@@ -85,7 +85,7 @@ article {
 .actionButton {
     padding: 1em;
     margin: 1em;
-    border: 4px solid var(--mainColor);
+    border: 4px solid var(--main-color);
     border-radius: 10em;
 }
 
@@ -94,11 +94,11 @@ article {
 .actionButton:visited {}
 
 .actionButton:hover, .actionButton:focus {
-    border-color: var(--highlightColor);
+    border-color: var(--highlight-color);
 }
 
 .actionButton:active {
-    border-color: var(--secondaryColor);
+    border-color: var(--secondary-color);
 }
 
 a {}
@@ -108,18 +108,18 @@ a:link {}
 a:visited {}
 
 a:hover, a:focus {
-    color: var(--highlightColor);
+    color: var(--highlight-color);
 }
 
 a:active {
-    color: var(--secondaryColor);
+    color: var(--secondary-color);
 }
 
 a[pageLink]:not([display]) {
     display: block;
     padding: 0.5em 1em;
-    color: var(--mainColor);
-    background-color: var(--secondBackgroundColor);
+    color: var(--main-color);
+    background-color: var(--second-background-color);
 }
 
 a[pageLink]:link {}
@@ -129,43 +129,43 @@ a[pageLink]:visited {}
 a[pageLink][select] {}
 
 a[pageLink]:hover:not([display]), a[pageLink]:focus:not([display]) {
-    background-color: var(--highlightColor);
+    background-color: var(--highlight-color);
 }
 
 a[pageLink]:active:not([display]) {
-    background-color: var(--tertiaryBackgroundColor);
+    background-color: var(--tertiary-background-color);
 }
 
 ::placeholder {
-    color: var(--tertiaryBackgroundColor);
+    color: var(--tertiary-background-color);
     opacity: 1;
 }
 
 input, select, textarea {
     display: block;
-    color: var(--tertiaryColor);
+    color: var(--tertiary-color);
     padding: 0.5em 0.5em;
     transition: border-bottom 250ms, background-color 250ms;
     opacity: 0.75;
     resize: none;
-    background-color: var(--secondaryColor);
+    background-color: var(--secondary-background-color);
 }
 
 input {
-    border-bottom: 4px solid var(--tertiaryColor);
+    border-bottom: 4px solid var(--tertiary-color);
 }
 
 select * {
-    background-color: var(--secondaryColor);
+    background-color: var(--secondary-background-color);
 }
 
 optgroup {
-    color: var(--tertiaryColor);
+    color: var(--tertiary-color);
     border-bottom: 4px solid rgb(50, 50, 50);
 }
 
 option {
-    color: var(--tertiaryColor);
+    color: var(--tertiary-color);
 }
 
 select:focus:not(:disabled), select:hover:not(:disabled) {
@@ -174,7 +174,7 @@ select:focus:not(:disabled), select:hover:not(:disabled) {
 
 input:focus, input:hover:not(:disabled) {
     background-color: white;
-    border-bottom: 4px solid var(--tertiaryColor);
+    border-bottom: 4px solid var(--tertiary-color);
 }
 
 textarea:focus:not(:disabled), textarea:hover:not(:disabled) {
@@ -193,7 +193,7 @@ input:focus:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([
 }
 
 input[type="button"], input[type="submit"], input[type="reset"] {
-    border-bottom: 4px solid var(--tertiaryColor);
+    border-bottom: 4px solid var(--tertiary-color);
 }
 
 input[type="range"] {
@@ -213,7 +213,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 1em;
     margin: 0px;
     padding: 0px;
-    background-color: var(--highlightColor);
+    background-color: var(--highlight-color);
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -222,7 +222,7 @@ input[type="range"]::-moz-range-thumb {
     width: 1em;
     margin: 0px;
     padding: 0px;
-    background-color: var(--highlightColor);
+    background-color: var(--highlight-color);
 }
 
 input[type="search"] {
@@ -285,17 +285,17 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background-color: var(--highlightColor);
+    background-color: var(--highlight-color);
 }
 
 progress::-moz-progress-bar {
-    background-color: var(--highlightColor);
+    background-color: var(--highlight-color);
 }
 
 input:disabled, input:read-only, select:disabled, textarea:disabled, progress:disabled, meter:disabled {
     border-bottom: none;
-    background-color: var(--tertiaryBackgroundColor);
-    color: var(--secondaryColor);
+    background-color: var(--tertiary-background-color);
+    color: var(--secondary-color);
     cursor: not-allowed;
 }
 
@@ -376,8 +376,8 @@ input:valid:not([novalidate]):not(:focus):not([type="button"]):not([type="search
 nav {
     display: flex;
     flex-direction: row;
-    background-color: var(--secondBackgroundColor);
-    box-shadow: 0em 0.25em 0.25em var(--mainBackgroundColor);
+    background-color: var(--second-background-color);
+    box-shadow: 0em 0.25em 0.25em var(--main-background-color);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -399,7 +399,7 @@ nav form {
 .content {
     margin: 1em;
     padding: 1em;
-    background-color: var(--mainBackgroundColor);
+    background-color: var(--main-background-color);
     text-align: center;
 }
 
@@ -417,7 +417,7 @@ nav form {
 }
 
 .underscript {
-    color: var(--highlightColor);
+    color: var(--highlight-color);
 }
 
 .profielImage {
@@ -431,7 +431,7 @@ nav form {
     background-size: cover;
     background-color: black;
     border-radius: 50%;
-    border: 4px solid var(--tertiaryColor);
+    border: 4px solid var(--tertiary-color);
     transition: transform 250ms;
 }
 

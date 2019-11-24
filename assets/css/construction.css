@@ -5,7 +5,7 @@
     text-align: center;
     position: fixed;
     z-index: 10;
-    box-shadow: 0 0 0.2em black;
+    box-shadow: 0 0 0.5em black;
     font-size: large;
 }
 
@@ -13,7 +13,7 @@
     margin: 0.5em;
     width: calc(100% - 1em);
     height: calc(100% - 1em);
-    background-color: var(--secondBackgroundColor);
+    background-color: var(--second-background-color);
     box-shadow: 0 0 0.5em black;
 }
 
