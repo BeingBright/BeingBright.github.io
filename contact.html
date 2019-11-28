@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/base-style.css">
+    <link rel="stylesheet" href="assets/css/hfs-style.css">
+    <link rel="icon" href="assets/image/favicon.ico">
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+            <div class="logo"></div>
+        </a>
+        <a class="menuButton" page-link><i class="material-icons highlight">menu</i></a>
+        <div id="top-nav-bar" class="load" html="assets/template/navigation.html"></div>
+    </nav>
+    <div class="content">
+        <div class="background-image landing" style="background-image: url('assets/image/home-1.png');">
+            <h1 class="highlight">GET IN TOUCH</h1>
+            <p>The HAN Formula Student team is open to answer your questions. Feel free to contact us via the contact
+                option
+                at the bottom of the page. We will respond as soon as possible within the working hours. We are waiting
+                for
+                your requests!</p>
+        </div>
+    </div>
+    <div class="content load" html="assets/template/contact-info.html"> </div>
+    <div class="content ">
+        <div class="box column">
+            <form class="column-2" action="" method="post">
+                <input placeholder="Name" type="text" name="name" id="name" required>
+                <input placeholder="Email" type="email" name="email" id="email" required>
+                <input placeholder="Subject" type="text" name="subject" id="subject" required>
+                <textarea placeholder="Message" name="message" id="message" cols="30" rows="15" required></textarea>
+                <input type="submit"></input>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        <div class="column box main-background ">
+            <div class="column-2 load" html="assets/template/extra-info.html"> </div>
+            <div class="column-2">
+                <h4 class="highlight">SITEMAP</h4>
+                <div class="sitemap load" html="assets/template/navigation.html"> </div>
+            </div>
+        </div>
+    </div>
+    <footer class="content box">
+        <span>Copyright 2019 by HAN Formula Student team</span>
+    </footer>
+</body>
+
+</html>
