@@ -19,7 +19,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--secondary-background);
+    background: var(--main-background);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -373,10 +373,10 @@ nav, .menuButton {
     display: flex;
     flex-direction: row;
     background: var(--secondary-background);
-    box-shadow: 0em 0.25em 0.5em #292b37;
     position: -webkit-sticky;
     position: sticky;
     justify-content: center;
+    align-content: space-around;
     top: 0;
     width: 100%;
     z-index: 10;
