@@ -1,29 +1,15 @@
-.sticky-in-middle {
+.underConstruction {
+    height: 10em;
     width: 100%;
-    height: 7.5em;
-    top: calc(50% - 3.25em);
+    top: calc(50% - 5em);
     text-align: center;
     position: fixed;
-    z-index: 10;
-    box-shadow: 0 0 0.5em black;
-    font-size: large;
-}
-
-.sticky-in-middle>* {
-    margin: 0.5em;
-    width: calc(100% - 1em);
-    height: calc(100% - 1em);
-    background-color: var(--second-background-color);
-    box-shadow: 0 0 0.5em black;
-}
-
-.sticky-in-middle>*>* {
-    padding: 0.4em;
 }
 
 .strips {
     background: repeating-linear-gradient( -55deg, rgb(255, 174, 0), rgb(255, 174, 0) 30px, #333 30px, #333 60px);
     width: 200vw;
+    height: 5%;
     -webkit-animation-name: MOVE-BG;
     -webkit-animation-duration: .6s;
     -webkit-animation-timing-function: linear;
@@ -70,9 +56,6 @@
     .strips {
         background: repeating-linear-gradient( -55deg, rgb(255, 174, 0), rgb(255, 174, 0) 20px, #333 20px, #333 40px);
     }
-    .sticky-in-middle {
-        font-size: 0.75em;
-    }
     @-webkit-keyframes MOVE-BG {
         from {
             -webkit-transform: translateX(-49px);
@@ -96,8 +79,5 @@
 @media only screen and (max-width: 460px) {
     .strips {
         background: repeating-linear-gradient( -55deg, rgb(255, 174, 0), rgb(255, 174, 0) 10px, #333 10px, #333 20px);
-    }
-    .sticky-in-middle {
-        font-size: 0.5em;
     }
 }
