@@ -603,8 +603,8 @@ nav form {
         width: 100%;
     }
     nav {
-        height: 5em;
         flex-direction: column;
+        
     }
     nav div {
         flex-direction: column;
@@ -619,19 +619,11 @@ nav form {
         background-color: var(--highlight);
         color: white;
     }
-    #top-nav-bar {
-        display: none;
+
+    nav, .menuButton {
+        justify-content: start;
     }
-    #top-nav-bar[show] {
-        position: absolute;
-        height: max-content;
-        width: 100vw;
-        top: 3.75em;
-        display: flex;
-        background-color: var(--main-background);
-        z-index: 10;
-        box-shadow: 0 0 1em #292b37;
-    }
+
     ::-webkit-scrollbar {
         width: 1em;
         height: 1em;
