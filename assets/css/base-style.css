@@ -141,6 +141,7 @@ input, select, textarea, button {
     transition: 250ms;
     resize: none;
     background: var(--main);
+    width: 100%;
 }
 
 input {
@@ -152,12 +153,12 @@ select * {
 }
 
 optgroup {
-    color: var(--tertiary);
+    color: var(--main-background);
     border-bottom: 4px solid rgb(50, 50, 50);
 }
 
 option {
-    color: var(--tertiary);
+    color: var(--main-background);
 }
 
 input[type="button"], input[type="submit"], input[type="reset"], button {
