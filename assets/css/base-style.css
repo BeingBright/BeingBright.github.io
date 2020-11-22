@@ -1,10 +1,10 @@
 :root {
-    --main: #000000;
-    --secondary: #333333;
-    --tertiary: #eeeeee;
-    --main-background: #eeeeee;
-    --secondary-background: #aaaaaa;
-    --tertiary-background: #656565;
+    --main: rgb(30, 30, 30);
+    --secondary:  rgb(30, 30, 30);
+    --tertiary:  rgb(30, 30, 30);
+    --main-background: rgb(255, 255, 255);
+    --secondary-background: rgb(255, 255, 255);
+    --tertiary-background: rgb(255, 255, 255);
     --highlight: #ff9100;
     --selectlight: #006EFF;
     --valid: rgb(0, 200, 0);
@@ -47,6 +47,8 @@
 body {
     background: var(--main-background);
 }
+
+
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0.5em;
@@ -140,14 +142,15 @@ input, select, textarea, button {
     display: block;
     color: var(--main);
     padding: 0.5em;
-    margin: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     transition: 250ms;
     resize: none;
     background: var(--secondary-background);
     width: 100%;
 }
 
-input {
+input, textarea {
     border-bottom: var(--border-width) solid var(--tertiary);
 }
 
@@ -162,10 +165,6 @@ optgroup {
 
 option {
     color: var(--secondary);
-}
-
-input[type="button"], input[type="submit"], input[type="reset"], button {
-    border-bottom: var(--border-width) solid var(--tertiary);
 }
 
 input[type="range"] {
@@ -225,12 +224,12 @@ input:focus:not(:disabled), input:hover:not(:disabled), button:hover:not(:disabl
 
 textarea:focus:not(:disabled), textarea:hover:not(:disabled) {
     background: white;
-    border-bottom: none;
+    border-bottom: var(--border-width) solid var(--selectlight);
 }
 
-textarea:focus:not(:disabled), select:focus:not(:disabled) {
+/* textarea:focus:not(:disabled), select:focus:not(:disabled) {
     outline: var(--border-width) solid var(--selectlight);
-}
+} */
 
 input:focus:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="button"]):not([type="submit"]):not([type="reset"]), input:hover:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not(:disabled) {
     outline: none;
@@ -327,7 +326,7 @@ input:invalid:not([novalidate]):not(:focus):not([type="button"]):not([type="sear
     border-bottom: var(--border-width) solid var(--invalid);
 }
 
-input:valid:not([novalidate]):not(:focus):not([type="button"]):not([type="search"]):not([type="submit"]):not([type="reset"]):not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]) {
+input:valid:not([novalidate]):not(:focus):not([type="button"]):not([type="search"]):not([type="submit"]):not([type="reset"]):not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]), textarea:not(:placeholder-shown):not(:disabled) {
     border-bottom: var(--border-width) solid var(--valid);
 }
 
@@ -393,11 +392,11 @@ nav, .menuButton {
     display: flex;
     flex-direction: row;
     background: var(--secondary-background);
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    /* top: 0; */
     justify-content: center;
     align-content: space-around;
-    top: 0;
     width: 100%;
     z-index: 10;
 }
