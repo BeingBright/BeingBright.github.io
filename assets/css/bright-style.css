@@ -111,7 +111,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0.5em;
+    /* margin: 0.5em; */
     padding: 0.5em;
     text-align: center;
 }
@@ -165,7 +165,7 @@ a:active {
 a[page-link]:not([display]) {
     display: block;
     padding: 1.25em;
-    color: var(--primary-color);
+    color: var(--primary-text);
     transition: color 250ms;
     border-bottom: var(--border-width) solid transparent;
 }
@@ -388,7 +388,7 @@ input:valid:not([novalidate]):not(:focus):not([type="button"]):not([type="search
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    margin: 1em;
+    /* margin: 1em; */
 }
 
 .column>.column-2 {
@@ -441,8 +441,11 @@ nav, .menuButton {
     display: flex;
     flex-direction: row;
     background: var(--secondary-background);
+    position: -webkit-sticky;
+    position: sticky;
     justify-content: center;
     align-content: space-around;
+    top: 0;
     width: 100%;
     z-index: 10;
 }
@@ -487,68 +490,62 @@ nav form {
     padding: 12.5em 0em;
 }
 
+.social-media {}
+
 .media-buttons>a {
     display: block;
-    width: 100%;
-    padding: 1em;
     margin: 1.5em 0em;
-}
-
-.facebook {
-    color: white !important;
-    background: #4267B2;
-    background: -moz-linear-gradient(45deg, #4267B2 0%, #375590 50%, #4267B2 100%);
-    background: -webkit-linear-gradient(45deg, #4267B2 0%, #375590 50%, #4267B2 100%);
-    background: linear-gradient(45deg, #4267B2 0%, #375590 50%, #4267B2 100%);
-}
-
-.facebook:hover {
-    background: -moz-linear-gradient(45deg, #375590 0%, #4267B2 50%, #375590 100%);
-    background: -webkit-linear-gradient(45deg, #375590 0%, #4267B2 50%, #375590 100%);
-    background: linear-gradient(45deg, #375590 0%, #4267B2 50%, #375590 100%);
-}
-
-.instagram {
-    color: white !important;
-    background: #f09433;
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.instagram:hover {
-    background: #000000;
-    background: -moz-linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
-    background: -webkit-linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
-    background: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
-}
-
-.youtube {
-    color: white !important;
-    background: #ff0000;
-    background: -moz-linear-gradient(45deg, #ff0000 0%, #bd0000 50%, #ff0000 100%);
-    background: -webkit-linear-gradient(45deg, #ff0000 0%, #bd0000 50%, #ff0000 100%);
-    background: linear-gradient(45deg, #ff0000 0%, #bd0000 50%, #ff0000 100%);
-}
-
-.youtube:hover {
-    background: -moz-linear-gradient(45deg, #bd0000 0%, #ff0000 50%, #bd0000 100%);
-    background: -webkit-linear-gradient(45deg, #bd0000 0%, #ff0000 50%, #bd0000 100%);
-    background: linear-gradient(45deg, #bd0000 0%, #ff0000 50%, #bd0000 100%);
 }
 
 .linkedin {
     color: white !important;
-    background: #ff0000;
-    background: -moz-linear-gradient(45deg, #2867B2 0%, #1f5699 50%, #2867B2 100%);
-    background: -webkit-linear-gradient(45deg, #2867B2 0%, #1f5699 50%, #2867B2 100%);
-    background: linear-gradient(45deg, #2867B2 0%, #1f5699 50%, #2867B2 100%);
+    background: #2867B2;
 }
 
 .linkedin:hover {
-    background: -moz-linear-gradient(45deg, #1f5699 0%, #2867B2 50%, #1f5699 100%);
-    background: -webkit-linear-gradient(45deg, #1f5699 0%, #2867B2 50%, #1f5699 100%);
-    background: linear-gradient(45deg, #1f5699 0%, #2867B2 50%, #1f5699 100%);
+    background: #1f5699;
+}
+
+.google {
+    color: white !important;
+    background: #dd4b39;
+}
+
+.google:hover {
+    background: #b43625;
+}
+
+.github {
+    color: white !important;
+    background: #6e5494;
+}
+
+.github:hover {
+    background: #574374;
+}
+
+.reddit {
+    color: white !important;
+    background: #ff4500;
+}
+
+.reddit:hover {
+    background: #c53500;
+}
+
+.discord {
+    color: white !important;
+    background: #7289da;
+}
+
+.discord:hover {
+    background: #596aa7;
+}
+
+.content {
+    width: 85vw;
+    max-width: 1000px;
+    margin: auto;
 }
 
 /* 4k desktop */
@@ -571,6 +568,10 @@ nav form {
     article, p {
         width: 100%;
     }
+    .content {
+        width: 100vw;
+        margin: none;
+    }
 }
 
 /* tablet */
@@ -586,6 +587,7 @@ nav form {
         width: 100%;
     }
     nav {
+        position: relative;
         flex-direction: row;
     }
     nav div {
