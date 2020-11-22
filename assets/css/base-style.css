@@ -1,16 +1,17 @@
 :root {
-    --main: rgb(255, 255, 255);
-    --secondary: rgb(175, 175, 175);
-    --tertiary: rgb(135, 135, 135);
-    --main-background: #2a2a2a;
-    --secondary-background: #3a3a3a;
-    --tertiary-background: #6a6a6a;
-    --highlight: rgb(0, 186, 211);
-    --selectlight: rgb(0, 225, 255);
+    --main: #000000;
+    --secondary: #333333;
+    --tertiary: #eeeeee;
+    --main-background: #eeeeee;
+    --secondary-background: #aaaaaa;
+    --tertiary-background: #656565;
+    --highlight: #ff9100;
+    --selectlight: #ff9100;
     --valid: rgb(0, 200, 0);
     --midrange: rgb(255, 130, 0);
     --invalid: rgb(255, 0, 0);
     --required: rgb(255, 0, 0);
+    --border-width: 2px;
 }
 
 ::-webkit-scrollbar {
@@ -40,6 +41,7 @@
     color: var(--main);
     box-sizing: border-box;
     font-size: 1em;
+    appearance: none;
 }
 
 body {
@@ -49,10 +51,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 0.5em;
     padding: 0.5em;
+    text-align: center;
 }
 
 .title {
-    border-bottom: 4px solid var(--secondary-background);
+    border-bottom: var(--border-width) solid var(--secondary-background);
 }
 
 h1 {
@@ -108,7 +111,7 @@ a[page-link]:not([display]) {
     padding: 1.25em;
     color: var(--main);
     transition: color 250ms;
-    border-bottom: 4px solid transparent;
+    border-bottom: var(--border-width) solid transparent;
 }
 
 a[page-link]:link {}
@@ -116,12 +119,12 @@ a[page-link]:link {}
 a[page-link]:visited {}
 
 a[page-link][select] {
-    border-bottom: 4px solid var(--highlight);
+    border-bottom: var(--border-width) solid var(--highlight);
 }
 
 a[page-link]:hover:not([display]), a[page-link]:focus:not([display]) {
     color: var(--highlight);
-    border-bottom: 4px solid var(--highlight);
+    border-bottom: var(--border-width) solid var(--highlight);
 }
 
 a[page-link]:active:not([display]) {
@@ -135,34 +138,34 @@ a[page-link]:active:not([display]) {
 
 input, select, textarea, button {
     display: block;
-    color: var(--main-background);
+    color: var(--main);
     padding: 0.5em;
     margin: 0.5em;
     transition: 250ms;
     resize: none;
-    background: var(--main);
+    background: var(--secondary-background);
     width: 100%;
 }
 
 input {
-    border-bottom: 4px solid var(--tertiary);
+    border-bottom: var(--border-width) solid var(--tertiary);
 }
 
 select * {
-    background: var(--secondary);
+    background: var(--secondary-background);
 }
 
 optgroup {
-    color: var(--main-background);
-    border-bottom: 4px solid rgb(50, 50, 50);
+    color: var(--main);
+    border-bottom: var(--border-width) solid rgb(50, 50, 50);
 }
 
 option {
-    color: var(--main-background);
+    color: var(--secondary);
 }
 
 input[type="button"], input[type="submit"], input[type="reset"], button {
-    border-bottom: 4px solid var(--tertiary);
+    border-bottom: var(--border-width) solid var(--tertiary);
 }
 
 input[type="range"] {
@@ -204,13 +207,24 @@ input[type="color"] {
     min-width: 2em;
 }
 
+input[type="checkbox"], input[type="radio"] {
+    border: var(--border-width) solid var(--secondary-background);
+    background-color: var(--main-background);
+    height: 1em;
+    width: 1em;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {}
+
+input[type="checkbox"]:focus, input[type="radio"]:focus {}
+
 select:focus:not(:disabled), select:hover:not(:disabled) {
     background: white;
 }
 
 input:focus:not(:disabled), input:hover:not(:disabled), button:hover:not(:disabled) {
     background: white;
-    border-bottom: 4px solid var(--selectlight);
+    border-bottom: var(--border-width) solid var(--selectlight);
 }
 
 textarea:focus:not(:disabled), textarea:hover:not(:disabled) {
@@ -219,12 +233,12 @@ textarea:focus:not(:disabled), textarea:hover:not(:disabled) {
 }
 
 textarea:focus:not(:disabled), select:focus:not(:disabled) {
-    outline: 4px solid var(--selectlight);
+    outline: var(--border-width) solid var(--selectlight);
 }
 
 input:focus:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="button"]):not([type="submit"]):not([type="reset"]), input:hover:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not(:disabled) {
     outline: none;
-    border-bottom: 4px solid var(--selectlight);
+    border-bottom: var(--border-width) solid var(--selectlight);
     background: white;
 }
 
@@ -305,11 +319,11 @@ input:out-of-range {}
 input:read-only {}
 
 input:invalid:not([novalidate]):not(:focus):not([type="button"]):not([type="search"]):not([type="submit"]):not([type="reset"]):not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]) {
-    border-bottom: 4px solid var(--invalid);
+    border-bottom: var(--border-width) solid var(--invalid);
 }
 
 input:valid:not([novalidate]):not(:focus):not([type="button"]):not([type="search"]):not([type="submit"]):not([type="reset"]):not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]) {
-    border-bottom: 4px solid var(--valid);
+    border-bottom: var(--border-width) solid var(--valid);
 }
 
 input:invalid:not([novalidate]):not(:focus):not([type="button"]):not([type="search"]):not([type="submit"]):not([type="reset"]):not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"])+label::after {}
@@ -605,7 +619,6 @@ nav form {
     }
     nav {
         flex-direction: column;
-        
     }
     nav div {
         flex-direction: column;
@@ -620,11 +633,9 @@ nav form {
         background-color: var(--highlight);
         color: white;
     }
-
     nav, .menuButton {
         justify-content: start;
     }
-
     ::-webkit-scrollbar {
         width: 1em;
         height: 1em;
