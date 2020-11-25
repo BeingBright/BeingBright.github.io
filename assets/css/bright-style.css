@@ -381,6 +381,7 @@ input:in-range, input:valid:not([novalidate]):not([type="button"]):not([type="se
 
 input:invalid:not([novalidate]):not([type="button"]):not([type="search"]):not([type="submit"]):not([type="reset"]):not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"])+label::after {
     content: "⚠";
+    color: var(--invalid);
 }
 
 input:invalid:not([novalidate]):not([type="button"]):not([type="search"]):not([type="submit"]):not([type="reset"]):not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"])+label {
@@ -389,6 +390,7 @@ input:invalid:not([novalidate]):not([type="button"]):not([type="search"]):not([t
 
 input:valid:not([novalidate]):not([type="button"]):not([type="search"]):not([type="submit"]):not([type="reset"]):not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"])+label::after {
     content: "✔";
+    color: var(--valid);
 }
 
 input:valid:not([novalidate]):not([type="button"]):not([type="search"]):not([type="submit"]):not([type="reset"]):not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"])+label {
