@@ -8,28 +8,73 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/base-style.css">
+    <link rel="stylesheet" href="/assets/css/bright-style.css">
     <link rel="stylesheet" href="/assets/css/construction.css">
 
 </head>
 
-<body>
+<body class="primary-background">
     <title>Test Pagina</title>
-    <h1>h1</h1>
-    <h2>h2</h2>
-    <h3>h3</h3>
-    <h4>h4</h4>
-    <h5>h5</h5>
-    <h6>h6</h6>
+    <div class="column">
+        <div class="column-3 primary">
+            <h3>primary</h3>
+            <h3 class="secondary">primary</h3>
+        </div>
+        <div class="column-3 base">
+            <h3>base</h3>
+            <h3 class="secondary">base</h3>
+        </div>
+        <div class="column-3 accent">
+            <h3>accent</h3>
+            <h3 class="secondary">accent</h3>
+        </div>
+    </div>
+    <div class="column">
+        <div class="column-3 primary-offset">
+            <h3>primary offset</h3>
+            <h3 class="secondary">primary offset</h3>
+        </div>
+        <div class="column-3 base-offset">
+            <h3>base offset</h3>
+            <h3 class="secondary">base offset</h3>
+        </div>
+        <div class="column-3 accent-offset">
+            <h3>accent offset</h3>
+            <h3 class="secondary">accent offset</h3>
+        </div>
+    </div>
+    <div class="column">
+        <div class="column-3 primary-background">
+            <h3>primary background</h3>
+            <h3 class="secondary">primary background offset</h3>
+        </div>
+        <div class="column-3 secondary-background">
+            <h3>secondary background</h3>
+            <h3 class="secondary">secondary background</h3>
+        </div>
+        <div class="column-3 tertiary-background">
+            <h3>tertiary background</h3>
+            <h3 class="secondary">tertiary background</h3>
+        </div>
+    </div>
+    <div>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+    </div>
     <p>een paragraaf</p>
     <a href="">een link</a>
-    <a href="index.html" page-link>Index</a>
+    <a href="" page-link>Index</a>
+    <a href="" page-link display>Index</a>
     <div id="demo">
     </div>
 
     <form action="" method="get">
-        <input autofocus value="123456789">
-        <input autofocus disabled value="123456789">
+        <input value="123456789">
+        <input disabled value="123456789">
         <pre><code class="markup language-markup">&lt;input autofocus&gt;</code></pre>
         <input>
         <input disabled="">
@@ -47,11 +92,15 @@
         <input type="password" placeholder="password" disabled="">
         <pre><code class="markup language-markup">&lt;input type=password placeholder=password&gt;</code></pre>
         <input type="radio">
+        <input type="radio">
+        <input type="radio">
         <input type="radio" disabled="">
         <pre><code class="markup language-markup">&lt;input type=radio&gt;</code></pre>
         <input type="radio" checked="">
+        <input type="radio" checked="">
         <input type="radio" checked="" disabled="">
         <pre><code class="markup language-markup">&lt;input type=radio checked&gt;</code></pre>
+        <input type="checkbox">
         <input type="checkbox">
         <input type="checkbox" disabled="">
         <pre><code class="markup language-markup">&lt;input type=checkbox&gt;</code></pre>
