@@ -434,7 +434,7 @@ input:valid:not([novalidate]):not([type="button"]):not([type="search"]):not([typ
 }
 
 .column-2, .column-3, .column-4, .column-5, .column-6, .column-7, .column-8 {
-    padding: 1em;
+    padding: 1em 1em;
 }
 
 .flex {
@@ -560,6 +560,12 @@ nav form {
     margin: auto;
 }
 
+.spotlight-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* 4k desktop */
 
 @media only screen and (min-width: 1442px) {}
@@ -594,6 +600,9 @@ nav form {
     }
     .column {
         flex-direction: column;
+    }
+    .reverse {
+        flex-direction: column-reverse;
     }
     .column>.column-2, .column>.column-3, .column>.column-4, .column>.column-5, .column>.column-6, .column>.column-7, .column>.column-8 {
         width: 100%;
